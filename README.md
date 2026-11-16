@@ -19,11 +19,7 @@
 
 ## 開發
 
-純前端，沒有任何相依套件。
-
-- 小夥伴資料都在 `data/partners.js`，每位的欄位（`values`、`level`、`main`、`bonus`、`abilities`）說明寫在檔案開頭的註解。
-- 程式在 `js/`，樣式在 `css/`。
-- 部署：GitHub Pages（Settings → Pages → `main` / root）。
+純前端，沒有任何相依套件，小夥伴資料在 `data/partners.js`。
 
 ## 相關專案
 
