@@ -189,15 +189,15 @@ window.PARTNERS = [
         { name: '每10個{狂戰士}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's14', name: '諸葛亮', slot: 13, values: null, main: '', bonus: {},
+  { id: 's14', name: '諸葛亮', slot: 13, values: [19, 40, 19, 24, 90, 28], main: '機械', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '諸葛亮的八陣圖', items: [
+        { name: '蝸牛文化', per: 5, unit: '' },
+        { name: '木材工坊木材產量', per: 1, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{機關人}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's15', name: '下水道烏龜', slot: 14, values: null, main: '', bonus: {},
