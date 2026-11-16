@@ -20,7 +20,7 @@
   var FOCUS_LEVEL = 22; // 達到此等級但未滿等 = 重點培養
 
   // 開發進度:已收錄 / 總數
-  document.getElementById('progress').textContent = window.PARTNERS.length + '/' + TOTAL;
+  document.getElementById('progress').textContent = window.PARTNERS.filter(function (p) { return p.values; }).length + '/' + TOTAL;
 
   // 依 LAYOUT 預先開好格子,再把小夥伴放進對應的格子
   var slots = [];
@@ -31,8 +31,10 @@
   window.PARTNERS.forEach(function (p) { if (slots[p.slot]) slots[p.slot].partner = p; });
   slots.forEach(function (slot, idx) {
     var p = slot.partner;
-    if (!p) {
-      var empty = el('article', 'card empty' + (slot.wide ? ' wide' : ''), '空格 ' + (idx + 1));
+    if (!p || !p.values) {
+      var empty = el('article', 'card empty' + (slot.wide ? ' wide' : ''));
+      empty.appendChild(el('span', 'slot-no', String(idx + 1)));
+      empty.appendChild(el('span', 'slot-name', (p && p.name) || '空格'));
       board.appendChild(empty);
       return;
     }

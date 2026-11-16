@@ -62,3 +62,6 @@ body {
 }
 .card.maxed { background: var(--max-bg); border-color: var(--max-line); }
 .card.focus { background: var(--focus-bg); border-color: var(--focus-line); }
+.card.empty { flex-direction: column; gap: 4px; }
+.slot-no { font-size: .75rem; }
+.slot-name { font-size: 1.05rem; font-weight: 700; color: var(--ink); }
