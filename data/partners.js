@@ -134,15 +134,15 @@ window.PARTNERS = [
       ] }
     ] },
 // ===== 以下是還沒填的格子:填 values、main、bonus、abilities 後就會顯示成卡片 =====
-  { id: 's8', name: '惠子', slot: 7, values: null, main: '', bonus: {},
+  { id: 's8', name: '惠子', slot: 7, values: [90, 20, 15, 22, 42, 31], main: '喪屍', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '惠子的死亡詛咒', items: [
+        { name: '蝸牛人氣', per: 5, unit: '' },
+        { name: '研究喪屍類基因免費時間', per: 30, unit: 's' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '每10個{怨靈}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
   { id: 's9', name: '赤兔馬・雌', slot: 8, values: null, main: '', bonus: {},
@@ -153,7 +153,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's10', name: '李建綱', slot: 9, values: null, main: '', bonus: {},
@@ -164,7 +164,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's11', name: '于吉', slot: 10, values: null, main: '', bonus: {},
@@ -175,7 +175,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's13', name: '尼安德塔人', slot: 12, values: null, main: '', bonus: {},
@@ -186,7 +186,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's14', name: '諸葛亮', slot: 13, values: null, main: '', bonus: {},
@@ -197,7 +197,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's15', name: '下水道烏龜', slot: 14, values: null, main: '', bonus: {},
@@ -208,7 +208,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's16', name: '魔春姬', slot: 15, values: null, main: '', bonus: {},
@@ -219,7 +219,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's17', name: '機械蝸牛', slot: 16, values: null, main: '', bonus: {},
@@ -230,7 +230,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's18', name: '開發組成員', slot: 17, values: null, main: '', bonus: {},
@@ -241,7 +241,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's19', name: '厄夢偵探', slot: 18, values: null, main: '', bonus: {},
@@ -252,7 +252,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's20', name: '[UR] 尼托克里斯', slot: 19, values: null, main: '', bonus: {},
@@ -263,7 +263,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's23', name: '女妖精', slot: 22, values: null, main: '', bonus: {},
@@ -274,7 +274,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's24', name: '雅典娜', slot: 23, values: null, main: '', bonus: {},
@@ -285,7 +285,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's26', name: '小食人花', slot: 25, values: null, main: '', bonus: {},
@@ -296,7 +296,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's27', name: '落魄老貴族', slot: 26, values: null, main: '', bonus: {},
@@ -307,7 +307,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's28', name: '蟑小美', slot: 27, values: null, main: '', bonus: {},
@@ -318,7 +318,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's29', name: '神性之子', slot: 28, values: null, main: '', bonus: {},
@@ -329,7 +329,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's30', name: '反抗之心', slot: 29, values: null, main: '', bonus: {},
@@ -340,7 +340,7 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] },
   { id: 's31', name: '趙子龍', slot: 30, values: null, main: '', bonus: {},
@@ -351,13 +351,17 @@ window.PARTNERS = [
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '每10個{}部隊', per: 10, unit: '' }
+        { name: '', per: 10, unit: '' }
       ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
   if (!p.values) return;
   p.stats = RACES.map(function (r, i) { return [r, p.values[i], (p.bonus && p.bonus[r]) || 0]; });
+  // 指揮的第一項一定是「本命種族類兵種數量」,名稱留空會自動帶入
+  (p.abilities || []).forEach(function (g) {
+    if (g.title === '指揮' && g.items[0] && !g.items[0].name && p.main) g.items[0].name = p.main + '類兵種數量';
+  });
   p.total = p.stats.reduce(function (a, s) { return a + s[1] + s[2]; }, 0);
   p.level = levelFromTotal(p.total);
 });
