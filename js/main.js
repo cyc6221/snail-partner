@@ -17,6 +17,7 @@
     return span;
   }
   var MAX_TOTAL = 600; // 六圍滿(每項 100)
+  var FOCUS_LEVEL = 22; // 達到此等級但未滿等 = 重點培養
 
   // 開發進度:已收錄 / 總數
   document.getElementById('progress').textContent = window.PARTNERS.length + '/' + TOTAL;
@@ -35,7 +36,7 @@
       board.appendChild(empty);
       return;
     }
-    var card = el('article', 'card' + (slot.wide ? ' wide' : '') + (p.total >= MAX_TOTAL ? ' maxed' : ''));
+    var card = el('article', 'card' + (slot.wide ? ' wide' : '') + (p.total >= MAX_TOTAL ? ' maxed' : p.level >= FOCUS_LEVEL ? ' focus' : ''));
     var head = el('div', 'card-head');
     head.appendChild(el('h2', null, p.name));
     var lv = el('span', 'lv');

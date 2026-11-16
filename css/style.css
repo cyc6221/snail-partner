@@ -1,11 +1,11 @@
 :root {
   --bg: #f6f3ec; --card: #fffdf8; --ink: #2b2a26; --muted: #7a766b;
-  --line: #e2dccd; --max-bg: #ffe3dc; --max-line: #d9432b; --accent: #6b8f3a; --accent-bg: #e8f0d8;
+  --line: #e2dccd; --focus-bg: #ffefd6; --focus-line: #e08a1e; --max-bg: #ffe3dc; --max-line: #d9432b; --accent: #6b8f3a; --accent-bg: #e8f0d8;
 }
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #1c1b18; --card: #26241f; --ink: #ece8dc; --muted: #a09b8c;
-    --line: #3a372f; --max-bg: #3d1d18; --max-line: #e0573f; --accent: #a5c96a; --accent-bg: #2f3a1d;
+    --line: #3a372f; --focus-bg: #3a2a14; --focus-line: #e0953a; --max-bg: #3d1d18; --max-line: #e0573f; --accent: #a5c96a; --accent-bg: #2f3a1d;
   }
 }
 * { box-sizing: border-box; }
@@ -61,3 +61,4 @@ body {
   border-style: dashed; background: transparent; color: var(--muted); font-size: .85rem;
 }
 .card.maxed { background: var(--max-bg); border-color: var(--max-line); }
+.card.focus { background: var(--focus-bg); border-color: var(--focus-line); }
