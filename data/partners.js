@@ -178,15 +178,15 @@ window.PARTNERS = [
         { name: '每10個{畫龍}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's13', name: '尼安德塔人', slot: 12, values: null, main: '', bonus: {},
+  { id: 's13', name: '尼安德塔人', slot: 12, values: [25, 90, 18, 40, 30, 17], main: '惡魔', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '尼安德塔人狩獵術', items: [
+        { name: '蝸牛人氣', per: 5, unit: '' },
+        { name: '蝸牛追擊', per: 5, unit: '' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{狂戰士}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's14', name: '諸葛亮', slot: 13, values: null, main: '', bonus: {},
