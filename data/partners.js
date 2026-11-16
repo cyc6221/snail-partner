@@ -167,15 +167,15 @@ window.PARTNERS = [
         { name: '每10個{牛頭人}部隊生命', per: 100, unit: '' }
       ] }
     ] },
-  { id: 's11', name: '于吉', slot: 10, values: null, main: '', bonus: {},
+  { id: 's11', name: '于吉', slot: 10, values: [70, 70, 70, 70, 70, 90], main: '巨龍', bonus: { '巨龍': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '于吉的符咒', items: [
+        { name: '蝸牛信仰', per: 10, unit: '' },
+        { name: '石材工坊石材產量', per: 1, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{畫龍}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
   { id: 's13', name: '尼安德塔人', slot: 12, values: null, main: '', bonus: {},
