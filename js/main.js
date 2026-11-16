@@ -38,7 +38,7 @@
     head.appendChild(el('h2', null, p.name));
     var lv = el('span', 'lv');
     lv.appendChild(el('span', null, 'Lv.' + p.level));
-    lv.appendChild(el('span', null, '六圍: ' + p.stats.reduce(function (a, s) { return a + s[1] + s[2]; }, 0)));
+    lv.appendChild(el('span', null, '六圍: ' + p.total));
     head.appendChild(lv);
     card.appendChild(head);
     var grid = el('dl', 'stats');
