@@ -211,15 +211,15 @@ window.PARTNERS = [
         { name: '每10個{亡靈烏龜}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's16', name: '魔春姬', slot: 15, values: null, main: '', bonus: {},
+  { id: 's16', name: '魔春姬', slot: 15, values: [34, 30, 29, 90, 17, 20], main: '異種', bonus: { '異種': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '魔春姬的觸手', items: [
+        { name: '蝸牛人氣', per: 5, unit: '' },
+        { name: '基因模擬訓練對敵人傷害', per: 0.5, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{魔化觸手}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's17', name: '機械蝸牛', slot: 16, values: null, main: '', bonus: {},
