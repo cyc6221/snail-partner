@@ -200,15 +200,15 @@ window.PARTNERS = [
         { name: '每10個{機關人}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's15', name: '下水道烏龜', slot: 14, values: null, main: '', bonus: {},
+  { id: 's15', name: '下水道烏龜', slot: 14, values: [90, 13, 43, 32, 25, 17], main: '喪屍', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '烏龜煉屍術', items: [
+        { name: '蝸牛信仰', per: 5, unit: '' },
+        { name: '醫療喪屍類速度', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{亡靈烏龜}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
   { id: 's16', name: '魔春姬', slot: 15, values: null, main: '', bonus: {},
