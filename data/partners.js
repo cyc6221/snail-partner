@@ -322,15 +322,15 @@ window.PARTNERS = [
         { name: '每10個{蟑小美}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's29', name: '神性之子', slot: 28, values: null, main: '', bonus: {},
+  { id: 's29', name: '神性之子', slot: 28, values: [70, 70, 90, 70, 70, 70], main: '天使', bonus: { '天使': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '神性之子的虔誠', items: [
+        { name: '蝸牛信仰', per: 5, unit: '' },
+        { name: '所有聖堂神性結晶產量', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{意志僕從}部隊生命', per: 100, unit: '' }
       ] }
     ] },
   { id: 's30', name: '反抗之心', slot: 29, values: null, main: '', bonus: {},
