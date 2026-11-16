@@ -16,7 +16,9 @@
   <h1>最強蝸牛・小夥伴能力模擬器</h1>
 </header>
 <nav class="viewnav" id="viewnav" aria-label="頁面切換">
-  <button type="button" class="vbtn" data-view="board" aria-current="true">小夥伴</button>
+  <button type="button" class="vbtn" data-view="board" aria-current="true">小夥伴能力</button>
+  <button type="button" class="vbtn" data-view="profiles" aria-current="false">小夥伴檔案</button>
+  <button type="button" class="vbtn" data-view="units" aria-current="false">兵種檔案</button>
   <button type="button" class="vbtn" data-view="summary" aria-current="false">能力加總</button>
   <div class="partner-nav" id="partnerNav">
     <button type="button" class="pn-btn" id="pnBtn" aria-haspopup="true" aria-expanded="false">小夥伴跳轉 ▾</button>
@@ -35,6 +37,8 @@
   </div>
 </div>
 <main class="board" id="board" aria-label="小夥伴檔案"></main>
+<section class="summary" id="profiles" aria-label="小夥伴檔案" hidden></section>
+<section class="summary" id="units" aria-label="兵種檔案" hidden></section>
 <section class="summary" id="summary" aria-label="能力加總" hidden></section>
 <script src="js/level.js"></script>
 <script src="data/partners.js"></script>
