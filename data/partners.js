@@ -344,15 +344,15 @@ window.PARTNERS = [
         { name: '每10個{腦殖機甲}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's31', name: '趙子龍', slot: 30, values: null, main: '', bonus: {},
+  { id: 's31', name: '趙子龍', slot: 30, values: [76, 74, 75, 81, 74, 96], main: '巨龍', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '趙子龍的逆襲術', items: [
+        { name: '蝸牛文化', per: 5, unit: '' },
+        { name: '心理煉金部門研究速度', per: 0.5, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{龍家班}部隊生命', per: 100, unit: '' }
       ] }
     ] }
 ];
