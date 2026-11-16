@@ -255,15 +255,15 @@ window.PARTNERS = [
         { name: '每10個{小惡魔}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's20', name: '[UR] 尼托克里斯', slot: 19, values: null, main: '', bonus: {},
+  { id: 's20', name: '[UR] 尼托克里斯', slot: 19, values: [90, 15, 41, 30, 25, 19], main: '喪屍', bonus: { '喪屍': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: 'UR抽卡玄學', items: [
+        { name: '蝸牛信仰', per: 5, unit: '' },
+        { name: '抽獎獲得藍珠轉為紫珠', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{[R] 木乃伊}部隊生命', per: 100, unit: '' }
       ] }
     ] },
   { id: 's23', name: '女妖精', slot: 22, values: null, main: '', bonus: {},
