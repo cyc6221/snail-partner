@@ -11,10 +11,23 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="sticky-top">
 <header class="top">
   <h1>最強蝸牛・小夥伴能力模擬器<br><small>(開發中 <span id="progress"></span>)</small></h1>
 </header>
+<nav class="viewnav" id="viewnav" aria-label="頁面切換">
+  <button type="button" class="vbtn" data-view="board" aria-current="true">小夥伴</button>
+  <button type="button" class="vbtn" data-view="summary" aria-current="false">能力加總</button>
+</nav>
+</div>
+<div class="menu" id="menu">
+  <button type="button" class="menu-btn" id="btnMenu" aria-label="小夥伴清單" aria-haspopup="true" aria-expanded="false" aria-controls="menuPop">
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+  <nav class="menu-pop" id="menuPop" aria-label="小夥伴清單" hidden></nav>
+</div>
 <main class="board" id="board" aria-label="小夥伴檔案"></main>
+<section class="summary" id="summary" aria-label="能力加總" hidden></section>
 <script src="js/level.js"></script>
 <script src="data/partners.js"></script>
 <script src="js/main.js"></script>
