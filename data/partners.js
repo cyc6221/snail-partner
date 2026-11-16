@@ -145,15 +145,15 @@ window.PARTNERS = [
         { name: '每10個{怨靈}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's9', name: '赤兔馬・雌', slot: 8, values: null, main: '', bonus: {},
+  { id: 's9', name: '赤兔馬・雌', slot: 8, values: [50, 90, 50, 50, 50, 50], main: '惡魔', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '赤兔馬・雌的梯雲縱', items: [
+        { name: '蝸牛藝術', per: 5, unit: '' },
+        { name: '研究異種類基因免費時間', per: 30, unit: 's' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{夢魘戰馬}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
   { id: 's10', name: '李建綱', slot: 9, values: null, main: '', bonus: {},
