@@ -62,7 +62,7 @@
         var items = g.items.filter(function (a) { return a.name; });
         if (!items.length) return; // 還沒填的能力不顯示
         var col = el('section', 'ab-col');
-        col.appendChild(el('h3', null, g.title));
+        if (g.title) col.appendChild(el('h3', null, g.title));
         items.forEach(function (a) {
           var v = Math.round(a.per * p.level * 100) / 100;
           var line = el('div', 'ability');
