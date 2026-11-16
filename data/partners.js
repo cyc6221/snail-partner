@@ -64,6 +64,17 @@ window.PARTNERS = [
         { name: '機械類兵種數量', per: 1, unit: '' },
         { name: '每10個{維修戰車}部隊生命', per: 100, unit: '' }
       ] }
+    ] },
+  { id: 'p6', name: '蔥音', slot: 5, level: 6, values: [9, 25, 90, 16, 55, 25], main: '天使',
+    abilities: [
+      { title: '蔥音的新番', items: [
+        { name: '蝸牛藝術', per: 5, unit: '' },
+        { name: '研究天使類基因免費時間', per: 30, unit: 's' }
+      ] },
+      { title: '指揮', items: [
+        { name: '天使類兵種數量', per: 1, unit: '' },
+        { name: '每10個{應援團}部隊生命', per: 100, unit: '' }
+      ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
