@@ -156,15 +156,15 @@ window.PARTNERS = [
         { name: '每10個{夢魘戰馬}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's10', name: '李建綱', slot: 9, values: null, main: '', bonus: {},
+  { id: 's10', name: '李建綱', slot: 9, values: [70, 70, 70, 90, 70, 70], main: '異種', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '李建綱的純愛戀歌', items: [
+        { name: '蝸牛文化', per: 5, unit: '' },
+        { name: '時光機探索加速產量', per: 1, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{牛頭人}部隊生命', per: 100, unit: '' }
       ] }
     ] },
   { id: 's11', name: '于吉', slot: 10, values: null, main: '', bonus: {},
