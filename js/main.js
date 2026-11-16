@@ -241,8 +241,62 @@
   }
   buildSummary();
 
+  // 兵種檔案:列出每種兵種是哪位小夥伴帶的、加成多少
+  function buildUnits() {
+    var box = document.getElementById('units');
+    var rows = [];
+    window.PARTNERS.forEach(function (p) {
+      if (!p.values || !p.abilities) return;
+      p.abilities.forEach(function (g) {
+        g.items.forEach(function (a) {
+          var m = a.name.match(/^每10個\{(.*)\}部隊(.*)$/);
+          if (!m) return;
+          rows.push({ unit: m[1], stat: m[2], value: Math.round(a.per * p.level * 100) / 100 + a.unit, partner: p.name, race: p.main });
+        });
+      });
+    });
+    box.appendChild(el('p', 'sum-note', '共 ' + rows.length + ' 種兵種(每 10 個上陣時的加成,依小夥伴目前等級計算)。'));
+    var table = el('table', 'sum-table');
+    var head = el('tr');
+    ['兵種', '種族', '加成', '小夥伴'].forEach(function (t) { head.appendChild(el('th', null, t)); });
+    table.appendChild(head);
+    rows.forEach(function (r) {
+      var tr = el('tr');
+      tr.appendChild(el('td', null, r.unit));
+      tr.appendChild(el('td', 'sum-who', r.race));
+      tr.appendChild(el('td', 'sum-val', r.stat + ' +' + r.value));
+      tr.appendChild(el('td', 'sum-who', r.partner));
+      table.appendChild(tr);
+    });
+    box.appendChild(table);
+  }
+  buildUnits();
+
+  // 小夥伴檔案:每位小夥伴的基本資料一覽
+  function buildProfiles() {
+    var box = document.getElementById('profiles');
+    box.appendChild(el('p', 'sum-note', '共 ' + window.PARTNERS.filter(function (p) { return p.values; }).length + ' 位小夥伴。'));
+    var table = el('table', 'sum-table');
+    var head = el('tr');
+    ['編號', '名字', '等級', '六圍', '本命種族'].forEach(function (t) { head.appendChild(el('th', null, t)); });
+    table.appendChild(head);
+    slots.forEach(function (slot, idx) {
+      var p = slot.partner;
+      if (!p || !p.values) return;
+      var tr = el('tr');
+      tr.appendChild(el('td', 'sum-who', String(idx + 1)));
+      tr.appendChild(el('td', null, p.name));
+      tr.appendChild(el('td', null, 'Lv.' + p.level));
+      tr.appendChild(el('td', null, String(p.total)));
+      tr.appendChild(el('td', 'sum-who', p.main));
+      table.appendChild(tr);
+    });
+    box.appendChild(table);
+  }
+  buildProfiles();
+
   // 頁面切換:小夥伴 / 能力加總
-  var views = { board: document.getElementById('board'), summary: document.getElementById('summary') };
+  var views = { board: document.getElementById('board'), profiles: document.getElementById('profiles'), units: document.getElementById('units'), summary: document.getElementById('summary') };
   document.querySelectorAll('.vbtn').forEach(function (b) {
     b.addEventListener('click', function () {
       Object.keys(views).forEach(function (k) { views[k].hidden = k !== b.dataset.view; });
