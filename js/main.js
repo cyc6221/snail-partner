@@ -16,8 +16,24 @@
     });
     return span;
   }
-  window.PARTNERS.forEach(function (p) {
-    var card = el('article', 'card' + (p.span === 2 ? ' wide' : ''));
+  // 開發進度:已收錄 / 總數
+  document.getElementById('progress').textContent = window.PARTNERS.length + '/' + TOTAL;
+
+  // 依 LAYOUT 預先開好格子,再把小夥伴放進對應的格子
+  var slots = [];
+  LAYOUT.split('').forEach(function (d) {
+    for (var i = 0; i < +d; i++) slots.push({ wide: d === '1' });
+  });
+  slots.length = Math.min(slots.length, TOTAL); // 超過總數的格子不開(最後一列右邊留空)
+  window.PARTNERS.forEach(function (p) { if (slots[p.slot]) slots[p.slot].partner = p; });
+  slots.forEach(function (slot, idx) {
+    var p = slot.partner;
+    if (!p) {
+      var empty = el('article', 'card empty' + (slot.wide ? ' wide' : ''), '空格 ' + (idx + 1));
+      board.appendChild(empty);
+      return;
+    }
+    var card = el('article', 'card' + (slot.wide ? ' wide' : ''));
     var head = el('div', 'card-head');
     head.appendChild(el('h2', null, p.name));
     var lv = el('span', 'lv');
