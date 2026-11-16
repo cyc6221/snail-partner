@@ -311,15 +311,15 @@ window.PARTNERS = [
         { name: '每10個{吸血鬼}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's28', name: '蟑小美', slot: 27, values: null, main: '', bonus: {},
+  { id: 's28', name: '蟑小美', slot: 27, values: [28, 45, 23, 90, 14, 20], main: '異種', bonus: { '異種': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '蟑小美的覓食技巧', items: [
+        { name: '蝸牛人氣', per: 5, unit: '' },
+        { name: '烹飪菜品美味度', per: 0.4, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{蟑小美}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's29', name: '神性之子', slot: 28, values: null, main: '', bonus: {},
