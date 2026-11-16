@@ -120,6 +120,17 @@ window.PARTNERS = [
         { name: '巨龍類兵種數量', per: 1, unit: '' },
         { name: '每10個{龍神胚胎}部隊防禦', per: 10, unit: '' }
       ] }
+    ] },
+  { id: 'p11', name: '蛞蝓龍家教', slot: 24, values: [98, 98, 98, 98, 98, 100], main: '巨龍', bonus: { '巨龍': 20 },
+    abilities: [
+      { title: '家教的課業輔導', items: [
+        { name: '蝸牛藝術', per: 5, unit: '' },
+        { name: '研究巨龍類基因免費時間', per: 30, unit: 's' }
+      ] },
+      { title: '指揮', items: [
+        { name: '巨龍類兵種數量', per: 1, unit: '' },
+        { name: '每10個{蛞蝓幼龍}部隊追擊', per: 10, unit: '' }
+      ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
