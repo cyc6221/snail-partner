@@ -333,15 +333,15 @@ window.PARTNERS = [
         { name: '每10個{意志僕從}部隊生命', per: 100, unit: '' }
       ] }
     ] },
-  { id: 's30', name: '反抗之心', slot: 29, values: null, main: '', bonus: {},
+  { id: 's30', name: '反抗之心', slot: 29, values: [23, 23, 26, 22, 90, 36], main: '機械', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '反抗之心的腦電波', items: [
+        { name: '蝸牛科技', per: 5, unit: '' },
+        { name: '蟲洞裝置提煉時間降低', per: 60, unit: 's' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{腦殖機甲}部隊防禦', per: 10, unit: '' }
       ] }
     ] },
   { id: 's31', name: '趙子龍', slot: 30, values: null, main: '', bonus: {},
