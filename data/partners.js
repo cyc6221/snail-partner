@@ -222,15 +222,15 @@ window.PARTNERS = [
         { name: '每10個{魔化觸手}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's17', name: '機械蝸牛', slot: 16, values: null, main: '', bonus: {},
+  { id: 's17', name: '機械蝸牛', slot: 16, values: [40, 25, 17, 17, 90, 31], main: '機械', bonus: { '機械': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '機械蝸牛的處理器', items: [
+        { name: '蝸牛科技', per: 5, unit: '' },
+        { name: '蟲洞裝置提煉時間降低', per: 60, unit: 's' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{機械蝸牛}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's18', name: '開發組成員', slot: 17, values: null, main: '', bonus: {},
