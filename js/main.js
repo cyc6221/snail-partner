@@ -16,6 +16,8 @@
     });
     return span;
   }
+  var MAX_TOTAL = 600; // 六圍滿(每項 100)
+
   // 開發進度:已收錄 / 總數
   document.getElementById('progress').textContent = window.PARTNERS.length + '/' + TOTAL;
 
@@ -33,7 +35,7 @@
       board.appendChild(empty);
       return;
     }
-    var card = el('article', 'card' + (slot.wide ? ' wide' : ''));
+    var card = el('article', 'card' + (slot.wide ? ' wide' : '') + (p.total >= MAX_TOTAL ? ' maxed' : ''));
     var head = el('div', 'card-head');
     head.appendChild(el('h2', null, p.name));
     var lv = el('span', 'lv');
