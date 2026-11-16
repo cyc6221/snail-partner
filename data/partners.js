@@ -76,6 +76,17 @@ window.PARTNERS = [
         { name: '天使類兵種數量', per: 1, unit: '' },
         { name: '每10個{應援團}部隊生命', per: 100, unit: '' }
       ] }
+    ] },
+  { id: 'p7', name: '未來貓', slot: 6, values: [100, 100, 100, 100, 100, 100], main: '天使',
+    abilities: [
+      { title: '未來貓的次元科技', items: [
+        { name: '蝸牛科技', per: 5, unit: '' },
+        { name: '研究所有基因速度', per: 1, unit: '%' }
+      ] },
+      { title: '指揮', items: [
+        { name: '天使類兵種數量', per: 1, unit: '' },
+        { name: '每10個{貓童子}部隊追擊', per: 10, unit: '' }
+      ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
