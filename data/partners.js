@@ -98,6 +98,17 @@ window.PARTNERS = [
         { name: '巨龍類兵種數量', per: 1, unit: '' },
         { name: '每10個{冰霜幼龍}部隊攻擊', per: 10, unit: '' }
       ] }
+    ] },
+  { id: 'p9', name: '滄龍', slot: 20, values: [96, 96, 96, 96, 96, 100], main: '巨龍', bonus: { '巨龍': 20 },
+    abilities: [
+      { title: '滄龍的巨齒', items: [
+        { name: '蝸牛文化', per: 5, unit: '' },
+        { name: '醫療巨龍類速度', per: 0.3, unit: '%' }
+      ] },
+      { title: '指揮', items: [
+        { name: '巨龍類兵種數量', per: 1, unit: '' },
+        { name: '每10個{小恐龍}部隊防禦', per: 10, unit: '' }
+      ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
