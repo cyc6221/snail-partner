@@ -266,15 +266,15 @@ window.PARTNERS = [
         { name: '每10個{[R] 木乃伊}部隊生命', per: 100, unit: '' }
       ] }
     ] },
-  { id: 's23', name: '女妖精', slot: 22, values: null, main: '', bonus: {},
+  { id: 's23', name: '女妖精', slot: 22, values: [31, 32, 17, 90, 33, 17], main: '異種', bonus: { '異種': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '女妖精的魅惑術', items: [
+        { name: '蝸牛藝術', per: 5, unit: '' },
+        { name: '醫療異種類速度', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{小沙彌}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's24', name: '雅典娜', slot: 23, values: null, main: '', bonus: {},
