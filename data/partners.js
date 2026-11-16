@@ -244,15 +244,15 @@ window.PARTNERS = [
         { name: '每10個{電腦小人}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's19', name: '厄夢偵探', slot: 18, values: null, main: '', bonus: {},
+  { id: 's19', name: '厄夢偵探', slot: 18, values: [13, 90, 45, 25, 23, 24], main: '惡魔', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '偵探的惡魔契約', items: [
+        { name: '蝸牛藝術', per: 5, unit: '' },
+        { name: '醫療惡魔類速度', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{小惡魔}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's20', name: '[UR] 尼托克里斯', slot: 19, values: null, main: '', bonus: {},
