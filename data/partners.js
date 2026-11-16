@@ -233,15 +233,15 @@ window.PARTNERS = [
         { name: '每10個{機械蝸牛}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's18', name: '開發組成員', slot: 17, values: null, main: '', bonus: {},
+  { id: 's18', name: '開發組成員', slot: 17, values: [30, 25, 21, 19, 90, 35], main: '機械', bonus: { '機械': 10 },
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '開發組的禿頭', items: [
+        { name: '蝸牛科技', per: 5, unit: '' },
+        { name: '醫療機械類速度', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{電腦小人}部隊追擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's19', name: '厄夢偵探', slot: 18, values: null, main: '', bonus: {},
