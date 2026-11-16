@@ -277,15 +277,16 @@ window.PARTNERS = [
         { name: '每10個{小沙彌}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's24', name: '雅典娜', slot: 23, values: null, main: '', bonus: {},
+  { id: 's24', name: '雅典娜', slot: 23, values: [70, 70, 90, 70, 70, 70], main: '天使', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '雅典娜的衣櫥', items: [
+        { name: '蝸牛人氣', per: 5, unit: '' },
+        { name: '蝸牛領導力', per: 1, unit: '' },
+        { name: '醫療天使類速度', per: 0.3, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{聖域鬥士}部隊生命', per: 100, unit: '' }
       ] }
     ] },
   { id: 's26', name: '小食人花', slot: 25, values: null, main: '', bonus: {},
