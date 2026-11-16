@@ -32,4 +32,4 @@
 
 ## 相關專案
 
-- [snail-collector-talent](https://github.com/cyc6221/snail-collector-talent) — 收藏家天賦模擬器
+- 收藏家天賦模擬器：[GitHub](https://github.com/cyc6221/snail-collector-talent)｜[網站](https://cyc6221.github.io/snail-collector-talent/)
