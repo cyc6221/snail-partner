@@ -289,15 +289,15 @@ window.PARTNERS = [
         { name: '每10個{聖域鬥士}部隊生命', per: 100, unit: '' }
       ] }
     ] },
-  { id: 's26', name: '小食人花', slot: 25, values: null, main: '', bonus: {},
+  { id: 's26', name: '小食人花', slot: 25, values: [90, 32, 27, 43, 18, 10], main: '喪屍', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '小食人花的吞噬', items: [
+        { name: '蝸牛信仰', per: 5, unit: '' },
+        { name: '地縫戰鬥食人花傷害', per: 1, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{花骨朵}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's27', name: '落魄老貴族', slot: 26, values: null, main: '', bonus: {},
