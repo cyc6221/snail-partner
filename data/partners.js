@@ -300,15 +300,15 @@ window.PARTNERS = [
         { name: '每10個{花骨朵}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
-  { id: 's27', name: '落魄老貴族', slot: 26, values: null, main: '', bonus: {},
+  { id: 's27', name: '落魄老貴族', slot: 26, values: [47, 90, 26, 23, 9, 25], main: '惡魔', bonus: {},
     abilities: [
-      { title: '', items: [
-        { name: '', per: 0, unit: '' },
-        { name: '', per: 0, unit: '' }
+      { title: '落魄老貴族的野心', items: [
+        { name: '蝸牛藝術', per: 5, unit: '' },
+        { name: '特殊遊客參觀點讚收益', per: 1, unit: '%' }
       ] },
       { title: '指揮', items: [
         { name: '', per: 1, unit: '' },
-        { name: '', per: 10, unit: '' }
+        { name: '每10個{吸血鬼}部隊攻擊', per: 10, unit: '' }
       ] }
     ] },
   { id: 's28', name: '蟑小美', slot: 27, values: null, main: '', bonus: {},
