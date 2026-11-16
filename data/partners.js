@@ -87,6 +87,17 @@ window.PARTNERS = [
         { name: '天使類兵種數量', per: 1, unit: '' },
         { name: '每10個{貓童子}部隊追擊', per: 10, unit: '' }
       ] }
+    ] },
+  { id: 'p8', name: '連名字都不能提的人', slot: 11, values: [98, 98, 98, 98, 98, 100], main: '巨龍', bonus: { '巨龍': 20 },
+    abilities: [
+      { title: '沒有名字的黑魔法', items: [
+        { name: '蝸牛信仰', per: 5, unit: '' },
+        { name: '研究惡魔類基因免費時間', per: 30, unit: 's' }
+      ] },
+      { title: '指揮', items: [
+        { name: '巨龍類兵種數量', per: 1, unit: '' },
+        { name: '每10個{冰霜幼龍}部隊攻擊', per: 10, unit: '' }
+      ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
