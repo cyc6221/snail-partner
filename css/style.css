@@ -115,3 +115,54 @@ body {
 }
 .sum-tab[aria-selected="true"] { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); font-weight: 700; }
 .sum-panel[hidden] { display: none; }
+.partner-nav {
+  display: flex; gap: 6px; overflow-x: auto; padding: 4px 56px 4px 16px; scrollbar-width: thin;
+}
+.partner-nav[hidden] { display: none; }
+.pn-item {
+  flex: none; padding: 3px 10px; border: 1px solid var(--line); border-radius: 99px;
+  color: var(--muted); font-size: .8rem; text-decoration: none; white-space: nowrap;
+}
+.pn-item:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-bg); }
+button.menu-item { width: 100%; border: 0; background: transparent; font: inherit; text-align: left; cursor: pointer; }
+.card { scroll-margin-top: 150px; }
+
+/* hover 效果(只在有滑鼠的裝置上啟用) */
+@media (hover: hover) {
+  .card { transition: transform .15s, box-shadow .15s; }
+  .card:not(.empty):hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0, 0, 0, .14); }
+  .stat { transition: background .12s; }
+  .stat:hover { background: var(--accent-bg); }
+  .ability { padding: 3px 6px; margin: 0 -6px; border-radius: 6px; transition: background .12s; }
+  .ability:hover { background: var(--accent-bg); }
+  .sum-table tr:not(:first-child):hover td { background: var(--accent-bg); }
+  .vbtn:hover:not([aria-current="true"]), .sum-tab:hover:not([aria-selected="true"]) { color: var(--accent); border-color: var(--accent); }
+  .menu-btn:hover { border-color: var(--accent); color: var(--accent); }
+}
+
+/* 小夥伴跳轉:hover 展開的下拉清單 */
+.partner-nav { position: relative; display: flex; justify-content: center; overflow: visible; padding: 2px 16px; }
+.pn-btn {
+  padding: 4px 16px; cursor: pointer; font: inherit; font-size: .9rem; color: var(--ink);
+  background: var(--card); border: 1px solid var(--line); border-radius: 99px;
+}
+.pn-pop {
+  display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+  width: min(760px, 94vw); max-height: 70vh; overflow-y: auto; padding: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px;
+  background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .18);
+}
+.partner-nav:hover .pn-pop, .partner-nav:focus-within .pn-pop, .partner-nav.open .pn-pop { display: grid; }
+.pn-item { white-space: normal; }
+.partner-nav .pn-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+/* 標題靠左、三個按鈕排成一排 */
+.top { text-align: left; padding: 14px 16px 6px; }
+.viewnav { justify-content: flex-start; align-items: center; padding: 0 16px; margin: 4px 0 6px; }
+.partner-nav { padding: 0; }
+.pn-pop { left: 0; transform: none; }
+.partner-nav { position: relative; }
+.vbtn, .pn-btn { font-size: .9rem; padding: 6px 16px; border-radius: 99px; }
+.pn-btn { background: transparent; color: var(--muted); }
+.partner-nav.closed .pn-pop, .partner-nav.closed:hover .pn-pop, .partner-nav.closed:focus-within .pn-pop { display: none; }
