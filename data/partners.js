@@ -109,6 +109,17 @@ window.PARTNERS = [
         { name: '巨龍類兵種數量', per: 1, unit: '' },
         { name: '每10個{小恐龍}部隊防禦', per: 10, unit: '' }
       ] }
+    ] },
+  { id: 'p10', name: '龍女中樞', slot: 21, values: [99, 99, 99, 98, 98, 100], main: '巨龍', bonus: { '巨龍': 10 },
+    abilities: [
+      { title: '龍女操作系統', items: [
+        { name: '蝸牛科技', per: 5, unit: '' },
+        { name: '醫療所有兵種速度', per: 0.3, unit: '%' }
+      ] },
+      { title: '指揮', items: [
+        { name: '巨龍類兵種數量', per: 1, unit: '' },
+        { name: '每10個{龍神胚胎}部隊防禦', per: 10, unit: '' }
+      ] }
     ] }
 ];
 window.PARTNERS.forEach(function (p) {
