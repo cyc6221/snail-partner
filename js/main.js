@@ -19,9 +19,6 @@
   var MAX_TOTAL = 600; // 六圍滿(每項 100)
   var FOCUS_LEVEL = 22; // 達到此等級但未滿等 = 重點培養
 
-  // 開發進度:已收錄 / 總數
-  document.getElementById('progress').textContent = window.PARTNERS.filter(function (p) { return p.values; }).length + '/' + TOTAL;
-
   // 依 LAYOUT 預先開好格子,再把小夥伴放進對應的格子
   var slots = [];
   LAYOUT.split('').forEach(function (d) {
@@ -79,24 +76,44 @@
     board.appendChild(card);
   });
 
-  // 右上角選單:小夥伴清單,點名字捲到對應的卡片
-  var btn = document.getElementById('btnMenu');
-  var pop = document.getElementById('menuPop');
+  // 置頂導航:小夥伴名單,點名字捲到對應的卡片
+  var nav = document.getElementById('pnPop');
+  var pnRoot = document.getElementById('partnerNav');
+  var pnBtn = document.getElementById('pnBtn');
   slots.forEach(function (slot, idx) {
     var p = slot.partner;
-    var a = el('a', 'menu-item');
+    var a = el('a', 'pn-item', (idx + 1) + ' ' + ((p && p.name) || '空格'));
     a.href = '#slot-' + (idx + 1);
-    a.appendChild(el('span', 'menu-no', String(idx + 1)));
-    a.appendChild(el('span', 'menu-name', (p && p.name) || '空格'));
-    if (p && p.values) a.appendChild(el('span', 'menu-lv', 'Lv.' + p.level));
     a.addEventListener('click', function (e) {
       e.preventDefault();
-      document.querySelector('.vbtn[data-view="board"]').click();
       var target = document.getElementById('slot-' + (idx + 1));
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setMenu(false);
+      pnRoot.classList.remove('open');
+      pnRoot.classList.add('closed'); // 滑鼠還停在上面時也要收起來
+      a.blur();
+      pnBtn.setAttribute('aria-expanded', 'false');
     });
-    pop.appendChild(a);
+    nav.appendChild(a);
+  });
+  // 滑鼠移開後,下次移上去才會再展開
+  pnRoot.addEventListener('mouseleave', function () { pnRoot.classList.remove('closed'); });
+  // 滑鼠移上去就展開(CSS);觸控裝置點按鈕切換
+  pnBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    var open = pnRoot.classList.toggle('open');
+    pnBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', function (e) {
+    if (!pnRoot.contains(e.target)) { pnRoot.classList.remove('open'); pnBtn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  // 右上角選單:首頁、GitHub
+  var btn = document.getElementById('btnMenu');
+  var pop = document.getElementById('menuPop');
+  document.getElementById('btnHome').addEventListener('click', function () {
+    document.querySelector('.vbtn[data-view="board"]').click();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setMenu(false);
   });
   function setMenu(open) {
     pop.hidden = !open;
@@ -229,6 +246,7 @@
   document.querySelectorAll('.vbtn').forEach(function (b) {
     b.addEventListener('click', function () {
       Object.keys(views).forEach(function (k) { views[k].hidden = k !== b.dataset.view; });
+      document.getElementById('partnerNav').hidden = b.dataset.view !== 'board';
       document.querySelectorAll('.vbtn').forEach(function (x) {
         x.setAttribute('aria-current', String(x === b));
       });
